@@ -37,14 +37,14 @@ export default function TodoTasks({ uid, accessToken }: TodoTasksProps) {
     if (accessToken) {
       getTasks();
     }
-  }, [uid, accessToken]);
+  }, [uid, accessToken, tasks]);
 
   return (
     <div className="py-5 px-5 border border-gray-400 flex flex-col w-96 rounded-xl gap-4">
       <h2>Tarefas</h2>
 
       {tasks.map((task) => (
-        <Task key={task.id} title={task.title} completed={task.completed} />
+        <Task key={task.id} title={task.title} completed={task.completed} taskId={task.id} accessToken={accessToken} description={task.description} />
       ))}
     </div>
   );
