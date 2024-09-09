@@ -47,7 +47,7 @@ VITE_API_URL="http://localhost:3001/"
 Para rodar o servidor, use:
 
 ```
-npm start
+npm run dev
 ```
 
 O servidor estará disponível em http://localhost:5173 (ou em outra porta configurada).
