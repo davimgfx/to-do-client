@@ -9,6 +9,7 @@ interface TaskProps {
   taskId: number;
   accessToken: string | null;
   description?: string;
+  
 }
 
 export default function Task({
@@ -46,7 +47,7 @@ export default function Task({
   return (
     <div className="w-full p-2 border-gray-400 border rounded-xl flex justify-between">
       <div className="flex gap-2">
-        <span className={`${completed ? 'line-through' : ''}`}>{title}</span>
+        <span className={`truncate w-52 ${completed ? 'line-through' : ''} `}>{title}</span>
       </div>
       <div className="flex items-center gap-2">
         <Pencil

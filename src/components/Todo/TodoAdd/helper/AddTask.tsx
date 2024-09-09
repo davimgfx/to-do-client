@@ -77,7 +77,7 @@ export default function AddTask({ uid, accessToken }: AddTaskProps) {
       </div>
       <button
         type="submit"
-        className="px-4 py-2 bg-primary rounded-xl text-white cursor-pointer disabled:opacity-50 mt-4">
+        className="px-4 py-2 bg-primary rounded-xl text-white cursor-pointer disabled:opacity-50 mt-4 w-full">
         Adicionar tarefa
       </button>
     </form>
