@@ -50,5 +50,5 @@ Para rodar o servidor, use:
 npm start
 ```
 
-O servidor estará disponível em http://localhost:3001 (ou em outra porta configurada).
+O servidor estará disponível em http://localhost:5173 (ou em outra porta configurada).
 
