@@ -20,6 +20,9 @@ https://github.com/davimgfx/to-do-service
 
 ## Como rodar:
 
+Rode primeiro o backEnd, link do projeto:
+https://github.com/davimgfx/to-do-service/
+
 Clone o repositório:
 
 ```
