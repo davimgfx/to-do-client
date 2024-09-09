@@ -3,6 +3,7 @@ import { decodeJWT, JwtPayload } from '../../utils/decodedTokenFunction';
 import { logo } from '../../assets';
 import TodoBoard from '../../components/Todo/TodoAdd/TodoAdd';
 import TodoTasks from '../../components/Todo/TodoTask/TodoTasks';
+import ButtonLogout from '../../components/ui/Buttons/ButtonLogout/ButtonLogout';
 
 export default function TaskManagerPage() {
   const [decodedToken, setDecodedToken] = useState<JwtPayload | null>(null);
@@ -29,18 +30,23 @@ export default function TaskManagerPage() {
   return (
     <section className="max-w-5xl mx-auto">
       <header>
-        <nav className="flex items-center gap-2 justify-center py-4 border-b border-b-gray-200">
-          <img
-            src={logo}
-            alt="logo do Task Manager"
-            className="w-7 cursor-pointer"
-          />
-          <span className="text-2xl text-primary font-bold">Task Manager</span>
+        <nav className="flex items-center gap-2 justify-between py-4 border-b border-b-gray-200">
+          <div className="flex items-center gap-1">
+            <img
+              src={logo}
+              alt="logo do Task Manager"
+              className="w-7 cursor-pointer"
+            />
+            <span className="text-2xl text-primary font-bold">
+              Task Manager
+            </span>
+          </div>
+          <ButtonLogout />
         </nav>
       </header>
       <main className="flex flex-col gap-2 justify-center items-center w-full  mt-4">
-        <TodoBoard />
-        <TodoTasks uid={decodedToken?.uid} accessToken={accessToken}/>
+        <TodoBoard uid={decodedToken?.uid} accessToken={accessToken}/>
+        <TodoTasks uid={decodedToken?.uid} accessToken={accessToken} />
       </main>
     </section>
   );

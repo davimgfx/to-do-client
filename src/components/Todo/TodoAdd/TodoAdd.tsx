@@ -2,10 +2,16 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 import AddTask from './helper/AddTask';
 
-export default function TodoBoard() {
+
+interface TodoBoardProps {
+  uid: number;
+  accessToken: string | null;
+}
+
+export default function TodoBoard({ uid, accessToken }: TodoBoardProps) {
   const [isAddTaskOpen, setIsAddTaskOpen] = useState(false);
   return (
-    <form className="py-5 px-5 border border-gray-400 flex flex-col w-96 rounded-xl gap-4">
+    <div className="py-5 px-5 border border-gray-400 flex flex-col w-96 rounded-xl gap-4">
       <div className="flex justify-between">
         <h2>Adicionar tarefa</h2>
         {isAddTaskOpen ? (
@@ -20,7 +26,7 @@ export default function TodoBoard() {
           />
         )}
       </div>
-      {isAddTaskOpen && <AddTask />}
-    </form>
+      {isAddTaskOpen && <AddTask uid={uid} accessToken={accessToken}/>}
+    </div>
   );
 }
