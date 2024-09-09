@@ -9,19 +9,21 @@ https://github.com/davimgfx/to-do-service
 
 ## Tecnologias usadas:
 
-- node
+- react
+- vite
 - dotenv
-- yup
 - typescript
-- knex
-- bcrypt
+- jwt-decode
+- lucide-react
+- react-toastify
+- react-router-dom
 
 ## Como rodar:
 
 Clone o repositório:
 
 ```
-git clone https://github.com/usuario/repositorio.git
+git clone https://github.com/davimgfx/to-do-client.git
 ```
 
 Instale as dependências:
@@ -35,18 +37,8 @@ Configure as variáveis de ambiente:
 Siga de base o arquivo chamado .env-example
 
 ```
-# Porta de acesso (local)
-PORT=3001
-
-# Configurações para o banco de dados
-DB_USER=
-DB_PASSWORD=
-DB_HOST=
-DB_PORT=
-DB_DATABASE_NAME=
-
-# JWT
-JWT_SECRET=
+# Endereço backend de desenvolvimento
+VITE_API_URL="http://localhost:3001/"
 ```
 
 Para rodar o servidor, use:
