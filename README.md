@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# To do client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esse é a parte frontEnd do projeto Full Stack To do. O diagrama do banco de dados:
 
-Currently, two official plugins are available:
+![Screenshot_1](https://github.com/user-attachments/assets/fe862d32-6a6a-4ebb-9faf-6daa57f4cc07)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Repositório do backend
+https://github.com/davimgfx/to-do-service
 
-## Expanding the ESLint configuration
+## Tecnologias usadas:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- node
+- dotenv
+- yup
+- typescript
+- knex
+- bcrypt
 
-- Configure the top-level `parserOptions` property like this:
+## Como rodar:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Clone o repositório:
+
+```
+git clone https://github.com/usuario/repositorio.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Instale as dependências:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+npm install
+```
+
+Configure as variáveis de ambiente:
+
+Siga de base o arquivo chamado .env-example
+
+```
+# Porta de acesso (local)
+PORT=3001
+
+# Configurações para o banco de dados
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+DB_PORT=
+DB_DATABASE_NAME=
+
+# JWT
+JWT_SECRET=
+```
+
+Para rodar o servidor, use:
+
+```
+npm start
+```
+
+O servidor estará disponível em http://localhost:3001 (ou em outra porta configurada).
+
